@@ -1,0 +1,17 @@
+* {margin: 0; padding: 0;} 
+body {padding: 20px;}
+#text {padding: 10px; height: 100px; border: 1px solid #bbb; margin-top: 10px;}
+
+.mention-lookup-nt {position: fixed; z-index: 100; }
+.mention-lookup-nt ul {color:#ccc; list-style-type: none; box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); overflow:auto; width: 300px; background: #fff; margin-top: 20px; max-height: 200px;}
+.mention-li-nt {border-bottom: 1px solid #eee;}
+.mention-li-nt:last-child {border-bottom: none;}
+.mention-li-nt[current] {background: #eee; cursor: pointer}
+.mention-lookup-nt li {background: #fff; padding: 5px 0; white-space: nowrap; white-space: nowrap; display: block; overflow: hidden; text-overflow: ellipsis;}
+.mention-nt {border: none; background: inherit; color: #000; margin: 0 5px;}
+
+.mention-li-nt.user {height: 40px;}
+.mention-li-nt.user div {font-size: 14px; padding-left: 50px; color: #000;}
+.mention-li-nt.user img {position:absolute; width:40px; height: 40px; margin-left: 5px;}
+.mention-nt.user {border-bottom: 1px dashed #bbb;}
+.mention.user {color: cornflowerblue ; display: inline-block; margin: 0 5px;}

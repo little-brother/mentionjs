@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8"/> 
+	<title>mentionjs</title>
+	<link rel="shortcut icon" type = "image/x-icon" href = "favicon.ico">
+	<link href = "index.css" rel = "stylesheet"/>
+	<script src = "mention.js"></script>
+</head>
+<body>
+	<p>Use @ to mention somebody</p>
+	<div id = "text" contenteditable></div>
+
+	<script type="text/javascript">
+		var items = [
+				{id: 1, name: 'John Ford', email: 'john@gmail.com', image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-nlCkUGfQFlG7ee2r5Rn7vQ0HdLg_OgMvWa5qkbKrUH9dXDQRw'},
+				{id: 2, name: 'Jane Good', email: 'jane@gmail.com', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRVTx1oTM9eRGWxeXR2RukGe0fbnCfJqoEo2eW3kgWT2jvk7Z9bg'},
+				{id: 3, name: 'Baby Face', email: 'baby@yahoo.com', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_veM5uk5zT6bb7rlbdTWr_yQg5U6ZAxeJqz5JYxZ3zZYPX1UgDQ'}
+		];
+	
+		mention({id: 'text', lookup: 'user', items});
+	</script>
+</body>
+</html>

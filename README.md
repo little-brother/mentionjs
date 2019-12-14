@@ -1,0 +1,1 @@
+Simple mention demo in pure JavaScript
