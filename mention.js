@@ -31,7 +31,7 @@ function mention (opts = {}) {
 	}
 	
 	function showLookup (event) {		
-	    var sel = window.getSelection();
+		var sel = window.getSelection();
 	
 		var text = sel.anchorNode && sel.anchorNode.nodeValue || '';
 		var curr = sel.focusOffset;
@@ -53,8 +53,8 @@ function mention (opts = {}) {
 		range = sel.getRangeAt(0);
 		var pos = {x: 0, y: 0};
 
-	    var clone = range.cloneRange();
-	    if (clone.getClientRects) {
+		var clone = range.cloneRange();
+		if (clone.getClientRects) {
 			clone.collapse(true);
 			var rect = clone.getClientRects()[0];
 
@@ -64,8 +64,8 @@ function mention (opts = {}) {
 				pos.y = rect.top - (isFixed ? parentRect.top - $parent.offsetTop : 0);
 				pos.x = rect.left - (isFixed ? parentRect.left - $parent.offsetLeft : 0);
 			}
-	    }
-    
+		}
+	
 		$lookup.style.left = pos.x + 'px';
 		$lookup.style.top = pos.y + 'px';
 		
@@ -107,12 +107,12 @@ function mention (opts = {}) {
 		$mention.setAttribute('disabled', true);
 	
 		var sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
+		sel.removeAllRanges();
+		sel.addRange(range);
 		range.setStart(sel.anchorNode, start);
 		range.setEnd(sel.anchorNode, end);
-	    range.deleteContents();
-	    range.insertNode($mention);
+		range.deleteContents();
+		range.insertNode($mention);
 		sel.collapseToEnd();
 
 		hideLookup();
